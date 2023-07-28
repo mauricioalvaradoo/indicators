@@ -14,4 +14,4 @@ La información es actualizable con el archivo [1_get_data.py](https://github.co
 Video demostrativo del dashboard*:
 ![](figures/dashboard.gif)
 
-* Toma unos segundos en procesarse en pantalla.
+\* Toma unos segundos en procesarse en pantalla.
