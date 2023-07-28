@@ -7,6 +7,8 @@ from econdata import BCRP, YFinance
 pd.options.display.max_columns = None
 
 
+start_date_a = '1980'
+end_date_a   = '2023'
 start_date_q = '1980Q1'
 end_date_q   = '2023Q1'
 start_date_m = '1993-01'
@@ -188,31 +190,28 @@ data_8 = BCRP.get_data(
 # Commodities
 data_9 = BCRP.get_data(
     {
-         'PN01652XM': 'Cobre LME',
-         'PN01654XM': 'Oro LME',
-         'PN01655XM': 'Plata H. Harman',
-         'PN01657XM': 'Zinc LME',
-         'PN01653XM': 'Estaño LME',
-         'PN01656XM': 'Plomo LME',
-         'PN01660XM': 'Petróleo WTI',
-         'PN01661XM': 'Trigo EEUU',
-         'PN01662XM': 'Maíz EEUU',
-         'PN01664XM': 'Aceite Soya EEUU',
-         'PN01649XM': 'Harina de Pescado Hamburgo',
+         'PD04701XD': 'Cobre LME',
+         'PD04704XD': 'Oro LME',
+         'PD04702XD': 'Plata H. Harman',
+         'PD04703XD': 'Zinc LME',
+         'PD04705XD': 'Petróleo WTI',
+         'PD31887XD': 'Trigo EEUU',
+         'PD31888XD': 'Maíz EEUU',
+         'PD31889XD': 'Aceite Soya EEUU',
     },
-    start_date_m,
-    end_date_m
+    start_date_d,
+    end_date_d
 )
 
 # Stocks
 data_10_1 = BCRP.get_data(
     {
-         'PN01142MM': 'Índice General BVL (base 31/12/91 = 100)',
-         'PN01143MM': 'Índice Selectivo BVL (base 31/12/91 = 100)',
+         'PD38026MD': 'Índice General BVL (base 31/12/91 = 100)',
+         'PD38027MD': 'Índice Selectivo BVL (base 31/12/91 = 100)',
          
     },
-    start_date_m,
-    end_date_m
+    start_date_d,
+    end_date_d
 )
 
 data_10_2 = YFinance.get_data(
@@ -228,9 +227,17 @@ data_10_2 = YFinance.get_data(
 )
 
 data_10_2.index = pd.to_datetime(data_10_2.index)
-data_10_2 = data_10_2.resample('M', axis = 0).mean()
-data_10_2.index = data_10_2.index.to_period('M').to_timestamp()
 data_10 = pd.concat([data_10_1, data_10_2], axis=1)
+
+data_11 = BCRP.get_data(
+    {
+     	'PM05776FA': 'Resultado Primario',
+        'PM05780FA': 'Resultado Económico'
+    },
+    fechaini=start_date_a,
+    fechafin=end_date_a
+)
+
 
 
 
@@ -246,6 +253,7 @@ with pd.ExcelWriter('data/macro-dataset.xlsx', engine='openpyxl') as excel_write
     data_8.to_excel(excel_writer, sheet_name='Balanza_Comercial')
     data_9.to_excel(excel_writer, sheet_name='Commodities')
     data_10.to_excel(excel_writer, sheet_name='Stocks')
+    data_11.to_excel(excel_writer, sheet_name='Anual')
 
     for sheet_name in excel_writer.sheets:
         sheet = excel_writer.sheets[sheet_name]
