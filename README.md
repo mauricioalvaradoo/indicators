@@ -10,4 +10,6 @@ Dashboard con cifras macroeconómicas del Perú de las siguientes categorías:
 La información es actualizable con el archivo [1_get_data.py](https://github.com/mauricioalvaradoo/indicators/blob/master/1_get_data.py).
 
 
+## Visualización
 
+![](figures/dashboard.gif)

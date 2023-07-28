@@ -190,11 +190,11 @@ data_8 = BCRP.get_data(
 # Commodities
 data_9 = BCRP.get_data(
     {
-         'PD04701XD': 'Cobre LME',
-         'PD04704XD': 'Oro LME',
-         'PD04702XD': 'Plata H. Harman',
-         'PD04703XD': 'Zinc LME',
-         'PD04705XD': 'Petróleo WTI',
+         'PD04701XD': 'Cobre LME (cUS$/lib)',
+         'PD04704XD': 'Oro LME (US$/onz)',
+         'PD04702XD': 'Plata H. Harman (cUS$/onz)',
+         'PD04703XD': 'Zinc LME (cUS$/lib)',
+         'PD04705XD': 'Petróleo WTI (US$/barril)',
          'PD31887XD': 'Trigo EEUU',
          'PD31888XD': 'Maíz EEUU',
          'PD31889XD': 'Aceite Soya EEUU',
