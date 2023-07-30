@@ -1,4 +1,4 @@
-# Economía Peruana
+# Perú: Indicadores macroeconómicos
 Dashboard con cifras macroeconómicas del Perú de las siguientes categorías:
 1. PBI y empleo
 2. Comercio
