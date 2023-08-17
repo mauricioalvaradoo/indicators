@@ -11,7 +11,6 @@ La información es actualizable con el archivo [1_get_data.py](https://github.co
 
 
 ## Visualización
-Video demostrativo del dashboard*:
-![](figures/dashboard.gif)
+Video demostrativo del dashboard:
 
-\* Toma unos segundos en procesarse en pantalla.
+https://github.com/mauricioalvaradoo/indicators/assets/99780331/bcd854cb-ac55-4386-901a-beda511b9a00
