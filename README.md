@@ -7,7 +7,7 @@ Dashboard con cifras macroeconómicas del Perú de las siguientes categorías:
 5. Política económica
 6. Cotizaciones
 
-La información es actualizable con el archivo [1_get_data.py](https://github.com/mauricioalvaradoo/indicators/blob/master/1_get_data.py).
+La información es actualizable con el archivo [1_get_data.py](https://github.com/mauricioalvaradoo/indicators/blob/master/1_get_data.py). La data se encuentra en la ruta [data/macro-dataset.xlsx](https://github.com/mauricioalvaradoo/indicators/blob/master/data/macro-dataset.xlsx).
 
 
 ## Visualización
