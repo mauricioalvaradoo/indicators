@@ -12,9 +12,9 @@ end_date_a   = '2023'
 start_date_q = '1980Q1'
 end_date_q   = '2023Q2'
 start_date_m = '1993-01'
-end_date_m   = '2023-09'
+end_date_m   = '2023-10'
 start_date_d = '1998-01-01'
-end_date_d   = '2023-09-04'
+end_date_d   = '2023-10-20'
 
 
 
