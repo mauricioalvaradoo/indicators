@@ -8,13 +8,14 @@ pd.options.display.max_columns = None
 
 
 start_date_a = '1980'
-end_date_a   = '2023'
 start_date_q = '1980Q1'
-end_date_q   = '2023Q2'
 start_date_m = '1993-01'
-end_date_m   = '2023-10'
 start_date_d = '1998-01-01'
-end_date_d   = '2023-10-20'
+
+end_date_a   = '2024'
+end_date_q   = '2024Q2'
+end_date_m   = '2024-06'
+end_date_d   = '2024-06-12'
 
 
 
@@ -221,6 +222,8 @@ data_10_2 = YFinance.get_data(
         '^IXIC': 'NASDAQ Composite',
         '^FTSE': 'FTSE 100',
         '^N225': 'Nikkei 225',
+        '^VIX': 'VIX index',
+        'DX-Y.NYB': 'US Dollar Index',
     },
     fechaini=start_date_d,
     fechafin=end_date_d
@@ -231,13 +234,27 @@ data_10 = pd.concat([data_10_1, data_10_2], axis=1)
 
 data_11 = BCRP.get_data(
     {
-     	'PM05776FA': 'Resultado Primario',
+        'PM05776FA': 'Resultado Primario',
         'PM05780FA': 'Resultado Económico'
     },
     fechaini=start_date_a,
     fechafin=end_date_a
 )
 
+
+
+# Index name
+data_1.index.name = 'time'
+data_2.index.name = 'time'
+data_3.index.name = 'time'
+data_4.index.name = 'time'
+data_5.index.name = 'time'
+data_6.index.name = 'time'
+data_7.index.name = 'time'
+data_8.index.name = 'time'
+data_9.index.name = 'time'
+data_10.index.name = 'time'
+data_11.index.name = 'time'
 
 
 
