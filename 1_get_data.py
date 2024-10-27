@@ -13,9 +13,9 @@ start_date_m = '1993-01'
 start_date_d = '1998-01-01'
 
 end_date_a   = '2024'
-end_date_q   = '2024Q2'
-end_date_m   = '2024-06'
-end_date_d   = '2024-06-12'
+end_date_q   = '2024Q3'
+end_date_m   = '2024-10'
+end_date_d   = '2024-10-22'
 
 
 
@@ -240,6 +240,8 @@ data_11 = BCRP.get_data(
     fechaini=start_date_a,
     fechafin=end_date_a
 )
+
+data_11.index = pd.to_datetime(data_11.index, format='%Y')
 
 
 
